@@ -5,20 +5,24 @@ The repository contains test cases and empty function definitions which need to 
 ## Getting started
 
 ### Clone the repository
+
 First up, create a fork of this repo.
 
 Then clone your copy of the repo:
+
 - `git clone git@github.com:*your-github-username*/javascript-basics.git`
 
 Then `cd` into the repository.
 
 You will see a few files and directory in here. Most interestingly we have:
+
 - `src` directory - this is where our code lives
 - `test` directory - this is where our test code lives
 - a `package.json` file, which contains some configuration for our project
 
 ### Install the project dependencies
-The `npm install` command (or `npm i` for short)  will tell npm (node package manager) to download the `dependencies` and `devDependencies` for this project, which are defined in the `package.json` file.
+
+The `npm install` command (or `npm i` for short) will tell npm (node package manager) to download the `dependencies` and `devDependencies` for this project, which are defined in the `package.json` file.
 
 **Take a look in `package.json` - what dependencies does this project have?**
 
@@ -27,7 +31,9 @@ Now run the `npm install` command. Once it has completed, you should see a new `
 In the `package.json` file you can see that there are only devDependencies for this project.
 
 ### Run the test code
-Jest is a JavaScript testing framework - it allows us to write automated tests that 
+
+Jest is a JavaScript testing framework - it allows us to write automated tests that
+
 1. describe how our code should behave
 2. assert that is _does_ behave in the desired way
 
@@ -48,9 +54,9 @@ The individual `it` blocks make some assertions about what should happen when we
 For example:
 
 ```js
-describe('sayHello', () => {
+describe("sayHello", () => {
   it('returns "Hello world!" when passed "world"', () => {
-    expect(sayHello('world')).toEqual('Hello, world!');
+    expect(sayHello("world")).toEqual("Hello, world!");
   });
 });
 ```
@@ -73,7 +79,7 @@ Expected value to equal:
 
 This tells us that calling the `helloWorld` function with the string `'world'` returned `undefined`, but the test was expecting it to return the string `'Hello, world!'`
 
-Now take a look at `src/strings.js` and in particular at the `sayHello` function: 
+Now take a look at `src/strings.js` and in particular at the `sayHello` function:
 
 ```js
 const sayHello = (string) => {
